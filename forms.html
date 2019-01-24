@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Register With Us</title>
+    </head>
+    <body>
+        <form method="POST" action="https://request-inspector.glitch.me/">
+            <fieldset>
+                <legend>User Login</legend>
+                <label for="email">Email</label>
+                <input id="email" type="text" name="email" placeholder="Enter your email address">
+                <br>
+                <label for="password">Password</label>
+                <input id="password" type="password" name="password" placeholder="Enter password">
+                <br>
+            </fieldset>
+            <fieldset>
+                <legend>Talk About YOU!</legend>
+                <textarea id="bio" name="bio" rows="10" cols="40" placeholder="bio"></textarea>
+            </fieldset>
+            <fieldset>
+                <legend>How Did You Hear About Us?</legend>
+                <label>
+                    <input type="radio" name="ad1" value="billboard">Billboard
+                </label>
+                <label>
+                    <input type="radio" name="ad1" value="radio advertisement">Radio Advertisement
+                </label>
+                <label>
+                    <input type="radio" name="ad2" value="internet advertisement">Internet Advertisement
+                </label>
+                <label>
+                    <input type="radio" name="ad2" value="other">Other
+                </label>
+
+            </fieldset>
+            <fieldset>
+                <legend>What Web Browser Are You Using?</legend>
+                <select name="web_browser">
+                    <option value="mozilla_firefox">Mozilla Firefox</option>
+                    <option value="google_chrome">Google Chrome</option>
+                    <option value="safari">Safari</option>
+                    <option value="internet_explorer">Internet Explorer</option>
+                    <option value="opera">Opera</option>
+                </select>
+            </fieldset>
+            <button type="submit">Submit</button>
+        </form>
+    </body>
+</html>
