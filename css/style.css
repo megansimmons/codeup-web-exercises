@@ -24,6 +24,7 @@
 body {
     background-color: #cedae0;
     font-family: 'News Cycle', sans-serif;
+    box-sizing: border-box;
 }
 
 /*
@@ -52,19 +53,17 @@ h2 {
 .main {
     background-image: url("../img/tex2res2.png");
 }
-
+/*
 .box {
     position: relative;
 }
-
-
 
 #value {
     float: left;
 }
 
 #process {
-    float: left;
+
     clear: left;
 }
 
@@ -72,16 +71,12 @@ h2 {
     float: right;
 }
 
+*/
 ul {
     list-style: square;
 }
 
-/*
-table.center {
-    margin-left:auto;
-    margin-right:auto;
-}
-*/
+
 
 h2.table {
     text-align: center;
