@@ -1,3 +1,4 @@
+
 @font-face {
     font-family: 'News Cycle';
     font-style: normal;
@@ -25,11 +26,12 @@ body {
     font-family: 'News Cycle', sans-serif;
 }
 
-
+/*
 .fancy-header {
     color: #7c878c;
-    text-decoration: underline;
+    text-decoration: none;
 }
+*/
 /*
 h1, p  {
     background-image: url("../img/hexellence.png");
@@ -37,20 +39,39 @@ h1, p  {
 */
 
 header {
-
-}
-h1 {
     text-align: center;
+    color: #7c878c;
 }
+
 
 h2 {
     color: #9aa7ad;
     text-decoration: underline;
 }
 
-div.main {
+.main {
     background-image: url("../img/tex2res2.png");
 }
+
+.box {
+    position: relative;
+}
+
+
+
+#value {
+    float: left;
+}
+
+#process {
+    float: left;
+    clear: left;
+}
+
+#vision {
+    float: right;
+}
+
 ul {
     list-style: square;
 }
