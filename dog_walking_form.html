@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Walk That Dog!</title>
+        <style type="text/css">
+            fieldset {
+                border: 0px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Happy Dogs</h1>
+        <form method="POST" action="https://request-inspector.glitch.me/">
+            <h3>Tell Us About Your Dog</h3>
+            <p>The more we know, the better we can match your dog with the right walker!</p>
+                <label for="name">Name</label>
+                    <input type="text" id="name" name="name">
+            <fieldset>
+                <legend>Age</legend>
+                <select id="age" name="age">
+                    <option value="puppy">0-1 year</option>
+                    <option value="youth">1-2 years</option>
+                    <option value="young adult">3-5 years</option>
+                    <option value="adult">6-8 years</option>
+                    <option value="senior">9+ years</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend>Size/Weight</legend>
+                <label>
+                    <input type="radio" name="weight" value="mini">Mini (0-10lbs)
+                </label><br>
+                <label>
+                    <input type="radio" name="weight" value="small">Small (11-25lbs)
+                </label><br>
+                <label>
+                    <input type="radio" name="weight" value="medium">Medium (26-50lbs)
+                </label><br>
+                <label>
+                    <input type="radio" name="weight" value="large">Large (51-90lbs)
+                </label><br>
+                <label>
+                    <input type="radio" name="weight" value="giant">Giant (91>lbs)
+                </label>
+            </fieldset>
+            <h3>Doggie Details</h3>
+                <h4>What does your dog like, love, or not like at all?</h4>
+            <textarea id="dog" name="dog" rows="20" cols="60" placehold="dog likes/dislikes"></textarea>
+            <h3>Anything Else We Can Do For Your Pup?</h3>
+            <fieldset>
+                <legend>Other Services</legend>
+                    <input type="checkbox" name="service1" value="bath">Bathing<br>
+                    <input type="checkbox" name="service2" value="groom">Grooming<br>
+                    <input type="checkbox" name="service3" value="training">Training<br>
+                    <input type="checkbox" name="service4" value="sitting">Pet Sitting<br>
+                    <input type="checkbox" name="service5" value="playdate">Play Dates<br>
+                    <input type="checkbox" name="service6" value="diet">Doggie Diets<br>
+            </fieldset>
+            <button type="submit">Submit</button>
+        </form>
+    </body>
+</html>
