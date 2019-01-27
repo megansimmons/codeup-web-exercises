@@ -13,7 +13,7 @@ body, html {
     border-radius: 5px;
     letter-spacing: .001em; /*necessary?*/
 } /*use .message vs div*/
-
+/*
 .message-info {
     background-color: #D0DEFC;
     color: #451e9d;
@@ -32,4 +32,28 @@ body, html {
 .message-error {
     background-color: #ffd1d6;
     color: #8d002b;
+}
+*/
+/*Bonus using css variables*/
+:root {
+    --bg-info: #D0DEFC;
+    --text-info: #451e9d;
+    --bg-success: #d6f2dc;
+    --text-success: #45794d;
+}
+.message-info {
+    background-color: var(--bg-info);
+    color: var(--text-info);
+}
+
+
+.message-success {
+    background-color: var(--bg-success);
+    color: var(--text-success);
+}
+.message-warning {
+
+}
+.message-error {
+
 }
