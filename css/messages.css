@@ -40,6 +40,10 @@ body, html {
     --text-info: #451e9d;
     --bg-success: #d6f2dc;
     --text-success: #45794d;
+    --bg-warning: #fcface;
+    --text-warning: #96873c;
+    --bg-error: #ffd1d6;
+    --text-error: #8d002b;
 }
 .message-info {
     background-color: var(--bg-info);
@@ -52,8 +56,12 @@ body, html {
     color: var(--text-success);
 }
 .message-warning {
+    background-color: var(--bg-warning);
+    color: var(--text-warning);
 
 }
 .message-error {
+    background-color: var(--bg-error);
+    color: var(--text-error);
 
 }
