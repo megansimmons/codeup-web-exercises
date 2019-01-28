@@ -50,7 +50,6 @@ body, html {
     color: var(--text-info);
 }
 
-
 .message-success {
     background-color: var(--bg-success);
     color: var(--text-success);
@@ -58,10 +57,8 @@ body, html {
 .message-warning {
     background-color: var(--bg-warning);
     color: var(--text-warning);
-
 }
 .message-error {
     background-color: var(--bg-error);
     color: var(--text-error);
-
 }
