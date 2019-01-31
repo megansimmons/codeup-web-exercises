@@ -3,7 +3,7 @@
 }
 body {
     margin: 0;
-    background-color: cornflowerblue;
+    /*background-color: cornflowerblue;*/
 }
 
 .container {
@@ -14,48 +14,55 @@ body {
 .row {
     width: 100%;
 }
-.row:after {
+.row:after {       /*locks in height and prevents row from collapse of floated elements...could also use overflow: auto but not as cross-compatible*/
     content: "";
     display: table;
     clear: both;
 }
+
+/* .one class for ensuring equal padding across the grid...and padding: 1em*/
 .column.one-half,
 .column.one-third,
 .column.one-fourth,
 .column.one-sixth,
-.column.one-eighth {
+.column.one-eighth,
+.column.two-thirds { /*two thirds class added for application to media-queries.html*/
     float: left;
     width: 100%;
     padding: 0 10px;
 }
 .column.one-half {
-    border: 1px solid black;
+    /*border: 1px solid black;*/
     width: 50%;
 }
 .column.one-third {
-    border: 1px solid black;
+    /*border: 1px solid black;*/
     width: 33.33%;
 }
 .column.one-fourth {
-    border: 1px solid black;
+    /*border: 1px solid black;*/
     width: 25%;
 }
 .column.one-sixth {
-    border: 1px solid black;
+    /*border: 1px solid black;*/
     width: 16.66%
 }
 .column.one-eighth {
-    border: 1px solid black;
+    /*border: 1px solid black;*/
     width: 12.5%;
 }
-
+.column.two-thirds {
+    width: 66.66%
+}
+/*this is backwards from walkthrough: the widths are specified in the @media... and width:100% is in default section of css*/
 /*Begin responsiveness*/
 @media screen and (max-width: 768px) {
     .column.one-half,
     .column.one-third,
     .column.one-fourth,
     .column.one-sixth,
-    .column.one-eighth {
+    .column.one-eighth,
+    .column.two-thirds {
         width: 100%;
     }
 }
