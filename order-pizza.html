@@ -47,88 +47,201 @@
     <hr>
 
     <!--These are the tabs-->
+
     <form action="" method="POST">
         <nav>
             <div class="nav nav-tabs" id="nav-tab" role="tablist">
                 <ul class="nav nav-tabs">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#" data-toggle="tab"><span class="badge badge-pill badge-secondary">1</span>
+                        <a class="nav-link active" href="#crust-size" data-toggle="tab" role="tab"><span class="badge badge-pill badge-secondary">1</span>
                             Size and Crust</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" data-toggle="tab"><span class="badge badge-pill badge-secondary">2</span>
+                        <a class="nav-link" href="#cheese-sauce" data-toggle="tab" role="tab"><span class="badge badge-pill badge-secondary">2</span>
                             Cheese and Sauce</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" data-toggle="tab"><span class="badge badge-pill badge-secondary">3</span>
+                        <a class="nav-link" href="#toppings" data-toggle="tab" role="tab"><span class="badge badge-pill badge-secondary">3</span>
                             Toppings</a>
                     </li>
                 </ul>
             </div>
         </nav>
 
-    <!--First Pizza Card-->
+    <!--First Pizza Tab/Main Card 1-->
+    <div class="tab-content">
 
-    <div class="card">
-        <div class="card-header bg-primary p-3 rounded text-light">
-            Choose size and crust
-        </div>
+        <div class="card tab-pane show active" id="crust-size" role="tabpane">
 
-        <!--Crust Selection and Size Below-->
+           <!--Blue header of main card. two cards inside with hand tossed and crispy choices-->
 
-        <div class="card-body"><!--Blue header of main card. two cards inside with hand tossed and crispy choices-->
+            <div class="card-header bg-primary p-3 rounded text-light">
+                Choose size and crust
+            </div>
 
-                <div class="card mb-3">
-                    <div class="card-header">
-                        Hand Tossed
+            <!--Crust Selection and Size Below-->
+
+            <div class="card-body">
+
+                    <div class="card mb-3">
+                        <div class="card-header">
+                            Hand Tossed
+                        </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                    <p class="card-text">Garlic seasoned crust with a rich, buttery taste.</p>
+                                </li>
+                                <li class="list-group-item">
+                                    <input  type="radio" name="exampleRadios" id="small-hand" value="option1">
+                                    <label class="form-check-label" for="small-hand"> Small (10")</label>
+                                </li>
+                                <li class="list-group-item">
+                                    <input  type="radio" name="exampleRadios" id="medium-hand" value="option2">
+                                    <label class="form-check-label" for="medium-hand"> Medium (12")</label>
+                                </li>
+                            </ul>
                     </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">
-                            <p class="card-text">Garlic seasoned crust with a rich, buttery taste.</p>
-                        </li>
-                        <li class="list-group-item">
-                            <input  type="radio" name="exampleRadios" id="small-hand" value="option1">
-                            <label class="form-check-label" for="small-hand"> Small (10")</label>
-                        </li>
-                        <li class="list-group-item">
-                            <input  type="radio" name="exampleRadios" id="medium-hand" value="option2">
-                            <label class="form-check-label" for="medium-hand"> Medium (12")</label>
-                        </li>
-                    </ul>
-                </div>
+                    <!--End inner/hand tossed card-->
 
+                    <!--Begin inner/crispy card-->
 
-                <!--Begin crispy card-->
+                    <div class="card">
+                        <div class="card-header">
+                            Crispy Thin
+                        </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                    <p class="card-text">Thin enough for optimum crispy to crunchy ratio.</p>
+                                </li>
+                                <li class="list-group-item">
+                                    <input type="radio" name="exampleRadios" id="med-crispy" value="option1">
+                                    <label class="form-check-label" for="small-hand"> Medium (12")</label>
+                                </li>
+                                <li class="list-group-item">
+                                    <input type="radio" name="exampleRadios" id="large-crispy" value="option2">
+                                    <label class="form-check-label" for="medium-hand"> Large (14")</label>
+                                </li>
+                            </ul>
+                        </div>
 
-            <div class="card">
-                <div class="card-header">
-                    Crispy Thin
-                </div>
-                <ul class="list-group list-group-flush">
-                        <li class="list-group-item">
-                            <p class="card-text">Thin enough for optimum crispy to crunchy ratio.</p>
-                        </li>
-                        <li class="list-group-item">
-                            <input type="radio" name="exampleRadios" id="med-crispy" value="option1">
-                            <label class="form-check-label" for="small-hand"> Medium (12")</label>
-                        </li>
-                        <li class="list-group-item">
-                            <input type="radio" name="exampleRadios" id="large-crispy" value="option2">
-                            <label class="form-check-label" for="medium-hand"> Large (14")</label>
-                        </li>
-                    </ul>
-                </div>
-
+                <!--End inner/crispy card-->
         </div>
+
+        <!--footer of first main card/crust card-->
+
         <div class="card-footer d-flex justify-content-end">
             <a href="#" class="btn btn-primary"> Next Step
                 <i class="fas fa-angle-right"></i>
             </a>
         </div>
+
+        <!--end footer of first main card/crust card-->
+    </div>
+
+
+
+
+        <!--Begin Second Pizza Tab/Main Card 2-->
+
+    <div class="card tab-pane" id="cheese-sauce">
+
+        <!--Blue header of main card. two cards inside with hand tossed and crispy choices-->
+
+       <div class="card-header bg-primary p-3 rounded text-light">
+            Choose Cheese and Sauce
+        </div>
+
+        <!--Cheese/Sauce Selection and Amount Below-->
+
+        <div class="card-body">
+
+            <div class="card mb-3">
+                <div class="card-header">
+                    Cheese
+                </div>
+
+                <div class="form-group pl-2 pr-2">
+                    <label for="cheese">How Much?</label>
+                    <select class="form-control" id="cheese">
+                        <option>Light</option>
+                        <option>Normal</option>
+                        <option>Extra</option>
+                        <option>Double</option>
+                    </select>
+                </div>
+            </div>
+            <!--End Inner/Cheese card-->
+
+            <!--Begin Inner/Sauce card-->
+
+            <div class="">
+                <div class="card-header">
+                    Sauce
+                </div>
+                    <div>
+                        <div class="form-group  pl-2 pr-2">
+                            <label for="sauce1">What Type</label>
+                            <select class="form-control" id="sauce1">
+                                <option>Tomato</option>
+                                <option>Marinara</option>
+                                <option>BBQ</option>
+                                <option>Alfredo</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group pl-2 pr-2">
+                            <label for="sauce2">How Much?</label>
+                            <select class="form-control" id="sauce2">
+                                <option>Light</option>
+                                <option>Normal</option>
+                                <option>Extra</option>
+                            </select>
+                        </div>
+                    </div>
+            </div>
+
+            <!-- End inner/crispy card-->
+        </div>
+
+        <!--footer of first main card/crust card-->
+
+        <div class="card-footer d-flex justify-content-end">
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-primary"><i class="fas fa-angle-left"></i> Previous</button>
+                <button type="button" class="btn btn-primary">Next <i class="fas fa-angle-right"></i></button>
+            </div>
+        </div>
+
+        <!--end footer of first main card/crust card-->
+    </div>
+
+
+    <!--third card-->
+       <div class="card tab-pane" id="toppings">
+           <div class="card mb-3">
+               <div class="card-header bg-primary p-3 rounded text-light">
+                   Choose Toppings
+               </div>
+               <div class="form-check">
+                   <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                   <label class="form-check-label" for="defaultCheck1">
+                       Default checkbox
+                   </label>
+               </div>
+               <div class="form-check">
+                   <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" disabled>
+                   <label class="form-check-label" for="defaultCheck2">
+                       Disabled checkbox
+                   </label>
+               </div>
+
+        </div>
+       </div>
+
     </div>
     </form>
 
-    </div>
+
 
 </main>
 
