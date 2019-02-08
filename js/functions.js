@@ -1,4 +1,4 @@
-(function() {
+// (function() {
     "use strict";
 
     /**
@@ -9,11 +9,17 @@
      * Example
      * > sayHello("codeup") // returns "Hello, codeup!"
      */
-    function sayHello(name) {
+    function sayHello(name) {           //function declaration syntax
         return "Hello, " + name + "!"
     }
 
+    // var sayHello = function(name) {    //function expression
+    //     return "Hello, " + name;
+    // };  //this is a function expression...extra step for demo purposes
+
     console.log(sayHello("Gandalf"));
+
+    //a higher order function accepts a function...read more on this later
     /**
      * TODO:
      * Call the function 'sayHello' and pass your name as a string literal argument.
@@ -85,11 +91,20 @@
      */
     var totalBill = prompt("What is the bill total?");
     var tipPercentage = prompt("What percentage would you like to tip?");
-    var tipAmount = calculateTip(tipPercentage, totalBill);
 
-// console.log(tipAmount);
-    alert("You should tip: $" + tipAmount);
+    // var tipAmount = calculateTip(tipPercentage, totalBill);
+    // alert("The total tip is $ " + calculateTip(tip/100, bill)) + "" .toFixed(2);
+    // console.log(tipAmount);
+    // alert("You should tip: $" + tipAmount);
 
+
+    //WALKTHRU: trying to format tip to be $
+    //when you have a string and combine it with multiplication and division, coercion will happen...but...
+    //var formattedTIp = (calculateTip(tipPercentage/100, totalBill)).toFixed(2);
+
+
+
+    // alert(tipPercentage * totalBill);    //can put an operation in an alert()...SABITA
 
     /**
      * TODO:
@@ -105,7 +120,7 @@
      *
      * > applyDiscount(45.99, 0.12) // 40.4712
      */
-
+    //could use Math.random() to generate number between 0 and 1
     function applyDiscount(originalPrice, discountPercent) {
         return originalPrice * discountPercent;
     }
@@ -113,4 +128,11 @@
     console.log(applyDiscount(100, .2));
 
 
-})();
+    //WALKTHRU
+
+    function applyDiscount(price, discountPercentage) {
+        return price - (price * discountPercentage);
+    }
+
+    console.log(applyDiscount(100, .2)); //TDD style write test/console.log BEFORE write function
+// })();
