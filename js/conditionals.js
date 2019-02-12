@@ -58,7 +58,8 @@ function evenOdd(userNumber) {
     if (userNumber % 2 === 0) {
         alert(userNumber + " is even.");
     } else {
-        alert(userNumber + " is odd.")
+        alert(userNumber + " is odd.");
+        //return "something in the console";
     }
 }
 
@@ -203,7 +204,7 @@ var totalAmt = prompt("What is the total of your bill?");
         if (luckyNumber === 0) {
             return "The total is discounted by " + "$" + (0 * totalAmt) + "."
         } else if (luckyNumber === 1) {
-            return "The discounted price is " + "$" + (totalAmt - (.10 * totalAmt)) + ".";
+            return "The discounted price is " + "$" + (totalAmt - (.10 * totalAmt)) + ".";//return v alert allows more flexibility to use function in other capacities
         } else if (luckyNumber === 2) {
             return "The discounted price is " + "$" + (totalAmt - (.25 * totalAmt)) + ".";
         } else if (luckyNumber === 3) {
@@ -217,7 +218,8 @@ var totalAmt = prompt("What is the total of your bill?");
         }
     }
     alert(calculateTotal(luckyNumber, totalAmt));
-
+//switch statement
+//local variable for discount calculation
 
 //These are my tests for the above function
 // console.log(calculateTotal(0, 100)); // The total is discounted by $0.
