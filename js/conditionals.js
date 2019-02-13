@@ -204,7 +204,7 @@ var totalAmt = prompt("What is the total of your bill?");
         if (luckyNumber === 0) {
             return "The total is discounted by " + "$" + (0 * totalAmt) + "."
         } else if (luckyNumber === 1) {
-            return "The discounted price is " + "$" + (totalAmt - (.10 * totalAmt)) + ".";//return v alert allows more flexibility to use function in other capacities
+            return "The discounted price is " + "$" + (totalAmt - (.10 * totalAmt)) + ".";//return versus alert allows more flexibility to use function in other capacities
         } else if (luckyNumber === 2) {
             return "The discounted price is " + "$" + (totalAmt - (.25 * totalAmt)) + ".";
         } else if (luckyNumber === 3) {
