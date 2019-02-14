@@ -1,7 +1,7 @@
 // (function() {
 "use strict"
 
-//FUNCTION EXAMPLE WITH LOOP
+//FUNCTION EXAMPLE WITH LOOP 2/13/19
 
 
 // function cubed(x) {
@@ -18,12 +18,13 @@
 //
 // cubed(50);//pass the number 50 into the function
 
-
+//EXERCISES
 
 // var multiple = 1;
 // function showMultiplicationTable(x) {
 //     for(let multiple = 1; multiple <= 12; multiple++) {
-//         console.log(x + " x " + multiple + " = " + (multiple * x));
+//      var m = multiple * x;
+//         console.log(x + " x " + multiple + " = " + m);
 //     }
 //
 // }
@@ -47,7 +48,7 @@
 // }
 
 
-// Create a for loop that uses console.log to create the output shown below.
+// Create a for loop that uses console.log to create the output shown below. TRIANGLE
 
 // 1
 // 22
@@ -63,6 +64,14 @@
 //     var num = p.toString();
 //     console.log(num.repeat(p));
 //
+// }
+//Another solution to triangle exercise
+// for (var x = 1; x < 10; x++) {
+//     var print = "";
+//     for (var y = 1; y <= x; y++) {
+//         print += x;
+//     }
+//     console.log(print);
 // }
 
 //For loop that counts back from 100 by 5
