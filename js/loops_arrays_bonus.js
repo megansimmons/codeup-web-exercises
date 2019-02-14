@@ -89,7 +89,8 @@ console.log(stringLength(stringies));
 // – exampleFunction(arr1, arr2) // returns true
 
 var array1 = ['apple', '4', '1', ''];
-var array2 = ['3', 2,'cat', 0 ]
+var array2 = ['3', 2,'cat', 0 ];
 
+function sumOne =
 
 // })();
