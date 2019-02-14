@@ -33,7 +33,7 @@
         for (var i = 0; i < planetsArray.length; i++) {
             var item = document.createElement('li');
             item.appendChild(document.createTextNode(planetsArray[i]));
-            list.appendChild(item)
+            list.appendChild(item);
         }
         return list;
     }
