@@ -84,13 +84,29 @@ function stringLength(input) {
 console.log(stringLength(stringies));
 
 // 5.   Create a function that takes in two arrays of elements, including numbers. If all numbers added together in the first array is equal to all the number inputs added in the second array, return true, otherwise, false. Only add together numeric elements but either array may contain non-numeric elements.
-// – var arr1 = ['bob', 1, true, 1, 2];
-// – var arr2 = [2, null, undefined, 0, 2, "apple"]
-// – exampleFunction(arr1, arr2) // returns true
+var onlyNumArray = [1,2, 3, 4];
+var sumNum = onlyNumArray.reduce(function(total, amount){
+    return total + amount
+});
+console.log(sumNum);//returns 10
 
-var array1 = ['apple', '4', '1', ''];
-var array2 = ['3', 2,'cat', 0 ];
+var stringNumArray = ['1','2','3','4'];
+var stringSum = stringNumArray.reduce(function(total, amount){
+    if
+})
+// var arr1 = ['bob', 1, true, 1, 2];
+// var arr2 = [2, null, undefined, 0, 2, "apple"];
+//
+// var sum1 = arr1.reduce(function(total, amt) {
+//     if (arr1 !== isNaN()
+//     return total + amt
+// });
+// console.log(sum1);
 
-function sumOne =
+// function getSum(total, num) {
+//     var sum1 = arr1.reduce()
+//
+// }
+
 
 // })();
