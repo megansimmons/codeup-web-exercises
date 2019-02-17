@@ -168,11 +168,11 @@ console.log(users);
 
 
     // for(var i = 0; i < shoppers.length; i++){
-    //     var discountTotal = shoppers[i].amount * 0.12;
-    //     var newTotal = shoppers[i].amount - discountTotal;
+    //     var discountTotal = (shoppers[i].amount * 0.12).toFixed(2);
+    //     var newTotal = (shoppers[i].amount - discountTotal).toFixed(2);
     //     // console.log(discountTotal);
     //     if(shoppers[i].amount > 200){
-    //         console.log(shoppers[i].name + ' your original price was $' + shoppers[i].amount + ' and your discount is $' + discountTotal + '. Your new total is ' + newTotal + '!');
+    //         console.log(shoppers[i].name + ' your original price was $' + shoppers[i].amount + ' and your discount is $' + discountTotal + '. Your new total is $' + newTotal + '!');
     //     } else {
     //         console.log(shoppers[i].name + ', you did not spend enough to receive a discount.');
     //     }
@@ -180,18 +180,18 @@ console.log(users);
 
     // use for-each loop with callback function for every item in array shoppers[]
 
-
-    shoppers.forEach(function(element, index, array) {
-        var discountTotal = element.amount * 0.12;
-        var newTotal = element.amount - discountTotal;
-
-        if(element.amount > 200){
-            console.log(element.name + ' your original price was $' + element.amount + ' and your discount is $' + discountTotal + '. Your new total is ' + newTotal + '!');
-        } else {
-            console.log(element.name + ', you did not spend enough to receive a discount.');
-        }
-
-    });
+    //
+    // shoppers.forEach(function(element, index, array) {
+    //     var discountTotal = (element.amount * 0.12).toFixed(2);
+    //     var newTotal = (element.amount - discountTotal).toFixed(2);
+    //
+    //     if(element.amount > 200){
+    //         console.log(element.name + ' your original price was $' + element.amount + ' and your discount is $' + discountTotal + '. Your new total is ' + newTotal + '!');
+    //     } else {
+    //         console.log(element.name + ', you did not spend enough to receive a discount.');
+    //     }
+    //
+    // });
 
 
 
@@ -208,53 +208,53 @@ console.log(users);
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
-var books = []
-        {
-            title: 'Stranger in a Strange Land',
-            author: {
-                firstName: 'Robert',
-                lastName: 'Heinlein'
-            }
-        },
-        {
-            title: 'Counting By Sevens',
-            author: {
-                firstName: 'Holly Goldberg',
-                lastName: 'Sloan'
-            }
-        },
-        {
-            title: 'The Man in the High Castle',
-            author: {
-                firstName: 'Phillip K',
-                lastName: 'Dick'
-            }
-        },
-        {
-            title: 'The Professor and the Madman',
-            author: {
-                firstName: 'Simon',
-                lastName: 'Winchester'
-            }
-        },
-        {
-            title: 'Mistress of the Art of Death',
-            author: {
-                firstName: 'Ariana',
-                lastName: 'Franklin'
-            },
-        },
-        {
-            title: 'The Devil in the White City',
-            author: {
-                firstName: 'Erik',
-                lastName: 'Larson'
-            }
-        }
-];
+var books = [];
+//         {
+//             title: 'Stranger in a Strange Land',
+//             author: {
+//                 firstName: 'Robert',
+//                 lastName: 'Heinlein'
+//             }
+//         },
+//         {
+//             title: 'Counting By Sevens',
+//             author: {
+//                 firstName: 'Holly Goldberg',
+//                 lastName: 'Sloan'
+//             }
+//         },
+//         {
+//             title: 'The Man in the High Castle',
+//             author: {
+//                 firstName: 'Phillip K',
+//                 lastName: 'Dick'
+//             }
+//         },
+//         {
+//             title: 'The Professor and the Madman',
+//             author: {
+//                 firstName: 'Simon',
+//                 lastName: 'Winchester'
+//             }
+//         },
+//         {
+//             title: 'Mistress of the Art of Death',
+//             author: {
+//                 firstName: 'Ariana',
+//                 lastName: 'Franklin'
+//             },
+//         },
+//         {
+//             title: 'The Devil in the White City',
+//             author: {
+//                 firstName: 'Erik',
+//                 lastName: 'Larson'
+//             }
+//         }
+// ];
 
 
-console.log(books[0].title);//testing
+// console.log(books[0].title);//testing
 
 
 // books.forEach(function(element, index, array){
@@ -299,16 +299,30 @@ console.log(books[0].title);//testing
      *   `showBookInfo` function.
      */
 
-    function createBook(title, author) {
+    function createBook(title, authorFirst, authorLast) {
         return books.push({
             title: title,
-                author: {
-                firstName: '',
-                    lastName: ''
-            }
+            author: {
+                    firstName: authorFirst,
+                    lastName: authorLast
+                }
+
         })
     }
 
-console.log(createBook('The Golden Compass', 'Philip Pullman'));
-    // console.log(books);
+console.log(createBook('The Golden Compass', 'Philip', 'Pullman'));
+console.log(createBook('Lonesome Dove', 'Larry', 'McMurtry'));;
+    console.log(books);
+
+
+   function showBookInfo(book) {
+       books.forEach(function (element, index, array) {
+           console.log('Book # ' + (index + 1));
+           console.log('Title: ' + element.title);
+           console.log('Author: ' + element.author.firstName + ' ' + element.author.lastName);
+       });
+   }
+showBookInfo();
+   createBook('Stranger in a Strange Land', 'Robert', 'Heinlein');
+   showBookInfo();
 // })();
