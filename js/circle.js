@@ -8,9 +8,8 @@
         getArea: function () {
             // TODO: complete this method
             // hint: area = pi * radius^2
-            var area = Math.PI * Math.pow(circle.radius,2);
 
-            return area;
+            return Math.PI * Math.pow(circle.radius,2);
                // TODO: return the proper value
         },
 
@@ -28,7 +27,9 @@
             }
         }
     };
-    // circle.logInfo();
+
+// console.log(circle.getArea());
+// circle.logInfo();
 
 
 
