@@ -209,13 +209,16 @@ console.log(users);
      * > console.log(books[0].author.lastName) // "Adams"
      */
 var books = [];
-//         {
-//             title: 'Stranger in a Strange Land',
-//             author: {
-//                 firstName: 'Robert',
-//                 lastName: 'Heinlein'
-//             }
-//         },
+//             genres: []
+// //         {
+// //             title: 'Stranger in a Strange Land',
+// //             author: {
+// //                 firstName: 'Robert',
+// //                 lastName: 'Heinlein'
+// //             }
+//                 genre: books.genres.[mystery],
+//
+// //         },
 //         {
 //             title: 'Counting By Sevens',
 //             author: {
@@ -311,7 +314,7 @@ var books = [];
     }
 
 console.log(createBook('The Golden Compass', 'Philip', 'Pullman'));
-console.log(createBook('Lonesome Dove', 'Larry', 'McMurtry'));;
+console.log(createBook('Lonesome Dove', 'Larry', 'McMurtry'));
     console.log(books);
 
 
@@ -325,4 +328,43 @@ console.log(createBook('Lonesome Dove', 'Larry', 'McMurtry'));;
 showBookInfo();
    createBook('Stranger in a Strange Land', 'Robert', 'Heinlein');
    showBookInfo();
+
+
+// BONUS 1 (expanding on the books object exercise):
+//
+// Add a property "keywords" that contains an array of possible genres the book may be categorized by
+
+books.genres = ['mystery','sci-fi', 'historical fiction', 'historical-nonfiction'];
+books.genres.push('cooking');
+
+// Add a boolean property "available" and set it to true
+// books.title.available = 'true';//NO CHANGE
+
+function isAvailable(book) {
+    books.forEach(function(element, index, array){
+        element.available = true;
+    });
+}
+
+isAvailable();
+console.log(books);
+// Add a dateAvailable property that has a string of the date/time when the book will be available
+// Add a method lend() that...
+// - changes the available property to false if it is not already false
+// - sets the dateAvailable to a date exactly two weeks from when the lend() method is called
+// (to do this, research the JS Date object and use methods from it in your code)
+// Add a method receive() that...
+// - changes the available property to true
+// - changes the dateAvailable property to the string "now"
+//
+//
+// BONUS 2 (expanding on the books object exercise):
+//
+// Create an application to take in user input to build the books array of objects.
+//     Allow the user to continue adding books or to finish adding books.
+//     Once the books have been added, output the books array in the console.
+//
+//     Allow a user to delete a book or a group of books by title or author last name
+//
+// Allow a user to edit a book by index number in the books array
 // })();
