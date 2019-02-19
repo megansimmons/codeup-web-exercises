@@ -111,9 +111,16 @@ console.log(users);
      *  > console.log(person.lastName) // "Sanchez"
      */
 
+//this is one way to initiate an object and its properties
+// var person = {};
+// person.firstName = "Megan";
+// person.lastName = "Simmons";
     var person = {
         firstName: "Megan",
-        lastName: "Simmons"
+        lastName: "Simmons",
+        sayHello : function(){
+            return 'Hey ' + this.firstName + ',' + ' your last name is ' + this.lastName + '!';
+        }
     };
     console.log(person.firstName);//"Megan"
     console.log(person.lastName);//"Simmons"
@@ -127,12 +134,12 @@ console.log(users);
      * Example
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
+    //move this INSIDE of the object for organizational purposes!!!!!!
+    // person.sayHello = function(){
+    //     return 'Hey ' + this.firstName + ',' + ' your last name is ' + this.lastName + '!';
+    // };
 
-    person.sayHello = function(){
-        console.log('Hey ' + this.firstName + ',' + ' your last name is ' + this.lastName + '!');
-    };
-
-    person.sayHello();
+console.log(person.sayHello());//would still want to keep the property sayHello() with a return statement versus a console.log
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
      * more than $200. If a shopper spends more than $200, they get a 12%
@@ -151,7 +158,8 @@ console.log(users);
     var shoppers = [
         {name: 'Cameron', amount: 180},
         {name: 'Ryan', amount: 250},
-        {name: 'George', amount: 320}
+        {name: 'George', amount: 320},
+        {name: 'Goofy', amount: 400}
     ];
 
 //Practicing accessing nested properties
@@ -181,19 +189,22 @@ console.log(users);
     // use for-each loop with callback function for every item in array shoppers[]
 
     //
-    // shoppers.forEach(function(element, index, array) {
-    //     var discountTotal = (element.amount * 0.12).toFixed(2);
-    //     var newTotal = (element.amount - discountTotal).toFixed(2);
-    //
-    //     if(element.amount > 200){
-    //         console.log(element.name + ' your original price was $' + element.amount + ' and your discount is $' + discountTotal + '. Your new total is ' + newTotal + '!');
-    //     } else {
-    //         console.log(element.name + ', you did not spend enough to receive a discount.');
-    //     }
-    //
-    // });
+    shoppers.forEach(function(shopper) {
+        //could create a var output = ''; in order to stack the info in the console.log versus having a long string. can concatenate a little at a time.
+        var discountTotal = (shopper.amount * 0.12).toFixed(2);
+        var newTotal = (shopper.amount - discountTotal).toFixed(2);
 
+        if(shopper.amount > 200){
+            console.log(shopper.name + ' your original price was $' + shopper.amount + ' and your discount is $' + discountTotal + '. Your new total is ' + newTotal + '!');
+        } else {
+            console.log(shopper.name + ', you did not spend enough to receive a discount.');
+        }
 
+    });
+
+//var output = '';
+// var discount = 0;
+//output +=   ... here is what will change and concatenate a string
 
 
     /** TODO:
@@ -266,6 +277,14 @@ var books = [];
 //     console.log('Title: ' + element.title);
 //     console.log('Author: ' + element.author.firstName + ' ' + element.author.lastName);
 // });
+
+//WALK THROUGH
+//     books.forEach(function(book, i){
+//         console.log("Book # " + (i + 1));
+//         console.log("Title: " + book.title);
+//         console.log("Author: " + book.author.firstName + "" + book.author.lastName);
+//         console.log('---');
+//     })
     /**
      * TODO:
      * Loop through the books array and output the following information about
@@ -301,8 +320,22 @@ var books = [];
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+//WALK THROUGH of first part of bonus
+//this function will be available to us from the beginning bc it is a first class citizen and attached to an implementation
+// function createBook(title, firstName, lastName) {
+//     var book = {};
+//     book.title = title;
+//     book.author = {};
+//     book.author.firstName = firstName;
+//     book.author.lastName = lastName;
+//     return book;
+// };
 
-    function createBook(title, authorFirst, authorLast) {
+//then use this function to create individual books
+//then...
+//books.push(createBook(title: "The Cat in the Hat", firstName: "Dr", lastName: "Suess")
+
+function createBook(title, authorFirst, authorLast) {
         return books.push({
             title: title,
             author: {
@@ -311,12 +344,21 @@ var books = [];
                 }
 
         })
-    }
+    };
 
 console.log(createBook('The Golden Compass', 'Philip', 'Pullman'));
 console.log(createBook('Lonesome Dove', 'Larry', 'McMurtry'));
     console.log(books);
 
+//WALK THROUGH of second part of bonus
+// function showBookInfo(book, i) {
+    // console.log("Book # " + (i + 1));
+//         console.log("Title: " + book.title);
+//         console.log("Author: " + book.author.firstName + "" + book.author.lastName);
+//         console.log('---');
+// }
+
+// books.forEach(showBookInfo);
 
    function showBookInfo(book) {
        books.forEach(function (element, index, array) {
