@@ -39,7 +39,7 @@
 //     var newInterval = setInterval(logOut, 2000);
 //     //setInterval RETURNS an intervalID
 
-//BEGIN EXERCIsES
+//BEGIN EXERCISES
 
     var detonationTimer = 5;
 
@@ -55,7 +55,8 @@
 
         detonationTimer--;
     }
-      var intervalOne = setInterval(function() {updateTimer()}, 1000);
+      // var intervalOne = setInterval(function() {updateTimer()}, 1000);
+    var intervalOne = setInterval(updateTimer, 1000);
 
     // TODO: When this function runs, it needs to
     // cancel the interval/timeout for updateTimer()

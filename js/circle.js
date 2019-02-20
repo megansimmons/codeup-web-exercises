@@ -27,7 +27,7 @@
             }
         }
     };
-
+//in general, it is better to return versus console.log, so that code is more reusable
 // console.log(circle.getArea());
 // circle.logInfo();
 
