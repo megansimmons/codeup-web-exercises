@@ -13,7 +13,7 @@
      * Create a log statement that will log the number of elements in the names
      * array.
      */
-console.log('There are ' + names.length + ' shapes in the array.');
+console.log('There are ' + names.length + ' names in the array.');
     /**
      * TODO:
      * Create log statements that will print each of the names individually by
@@ -22,9 +22,9 @@ console.log('There are ' + names.length + ' shapes in the array.');
 console.log("The first name is: " + names[0]);
 console.log("The second name is: " + names[1]);
 console.log("The third name is: " + names[2]);
-console.log("The fourth name is: " + names[3]);"The first name is: " + names[0]
-;    /**
-     * TODO:
+console.log("The fourth name is: " + names[3]);
+   /**
+     * TODO
      * Write some code that uses a for loop to log every item in the names
      * array.
      */

@@ -188,23 +188,42 @@ console.log(person.sayHello());//would still want to keep the property sayHello(
 
     // use for-each loop with callback function for every item in array shoppers[]
 
+
+
     //
-    shoppers.forEach(function(shopper) {
-        //could create a var output = ''; in order to stack the info in the console.log versus having a long string. can concatenate a little at a time.
-        var discountTotal = (shopper.amount * 0.12).toFixed(2);
-        var newTotal = (shopper.amount - discountTotal).toFixed(2);
-
-        if(shopper.amount > 200){
-            console.log(shopper.name + ' your original price was $' + shopper.amount + ' and your discount is $' + discountTotal + '. Your new total is ' + newTotal + '!');
-        } else {
-            console.log(shopper.name + ', you did not spend enough to receive a discount.');
-        }
-
-    });
+    // shoppers.forEach(function(shopper) {
+    //     //could create a var output = ''; in order to stack the info in the console.log versus having a long string. can concatenate a little at a time.
+    //     var discountTotal = (shopper.amount * 0.12).toFixed(2);
+    //     var newTotal = (shopper.amount - discountTotal).toFixed(2);
+    //
+    //     if(shopper.amount > 200){
+    //         console.log(shopper.name + ' your original price was $' + shopper.amount + ' and your discount is $' + discountTotal + '. Your new total is ' + newTotal + '!');
+    //     } else {
+    //         console.log(shopper.name + ', you did not spend enough to receive a discount.');
+    //     }
+    //
+    // });
 
 //var output = '';
 // var discount = 0;
 //output +=   ... here is what will change and concatenate a string
+
+shoppers.forEach(function(shopper){
+    var output = " ";
+    var discount = 0;
+    if(shopper.amount > 200) {
+        discount = shopper.amount * .12;
+        output += shopper.Name;
+        output += "Original bill price: ";
+        output += shopper.amount;
+        output += ", saved: ";
+        output += discount;
+        output += "Discounted: ";
+        output += shopper.name - discount;
+    }
+};
+
+
 
 
     /** TODO:
@@ -344,7 +363,7 @@ function createBook(title, authorFirst, authorLast) {
                 }
 
         })
-    };
+    }
 
 console.log(createBook('The Golden Compass', 'Philip', 'Pullman'));
 console.log(createBook('Lonesome Dove', 'Larry', 'McMurtry'));

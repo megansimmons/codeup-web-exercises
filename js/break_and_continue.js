@@ -2,6 +2,41 @@
 
 "use strict"
 
+// 2/23/19
+// for(var i = 0; i < 101; i++) {
+//     if(i === 50) {
+//         continue;
+//     } else if(i % 2 === 1) {
+//         console.log('Odd number: ' + i);
+//     } else if(i % 2 === 0) {
+//         console.log('Even number: ' + i);
+//     }
+// }
+var i = 0;
+// while (i < 101) {
+//     i++;
+//     if(i === 50) {
+//         continue;
+//     } else if(i % 2 === 1) {
+//         console.log('Odd number: ' + i);
+//     } else if(i % 2 === 0) {
+//         console.log('Even number: ' + i);
+//     }
+// }
+//if increment is at bottom of conditional-->infinite
+
+
+do {
+    i++;
+    if(i === 50) {
+        continue;
+    } else if(i % 2 === 1) {
+        console.log('Odd number: ' + i);
+    } else if(i % 2 === 0) {
+        console.log('Even number: ' + i);
+    }
+}while (i <= 99);
+
 
 // Lecture Notes 2/13/19
 //LECTURE 2/13/19
@@ -16,7 +51,7 @@
 //     if(x === randomNumber) {
 //         console.log("The number is " + x);//once x is the same as the randomNumber
 //         break;
-//         //console.log(x); will never run because the loop breaks ot first!
+        //console.log(x); will never run because the loop breaks out first!
 //     }
 // }
 //CONTINUE; forces next iteration of loop...kind of like "skip"...use for things you DON'T want to show up
@@ -33,32 +68,32 @@
 
 // Prompt the user for an odd number between 1 and 50. Use a loop and a break statement to continue prompting the user if they enter invalid input.
 //check for isNaN, even #s, and out of range
-let userChoice = prompt("Pick and odd number between 1 and 50.");
+// let userChoice = prompt("Pick and odd number between 1 and 50.");
 
-for(var x = 1; x < 51; x) {
-    // userChoice = parseInt(userChoice);
-
-    if (+userChoice % 2 === 0) {
-        userChoice = prompt("This isn't an odd number.");
-        continue;
-    } else {
-        console.log("Your odd number is : " + userChoice);
-    }
-    if (x % 2 === 1) {
-        break;
-    }
-}
+// for(var x = 1; x < 51; x) {
+//     // userChoice = parseInt(userChoice);
+//
+//     if (+userChoice % 2 === 0) {
+//         userChoice = prompt("This isn't an odd number.");
+//         continue;
+//     } else {
+//         console.log("Your odd number is : " + userChoice);
+//     }
+//     if (x % 2 === 1) {
+//         break;
+//     }
+// }
 
 // Use a loop and the continue statement to output all the odd numbers between 1 and 50, except for the number the user entered.
 
-for(let x = 1; x < 51; x++) {
-        if (+userChoice === x) {
-            console.log("Yikes, skipping this number: " + userChoice);
-            continue;
-        } else if (x % 2 === 1) {
-            console.log("Here is an odd number: " + x);
-        }
-}
+// for(let x = 1; x < 51; x++) {
+//         if (+userChoice === x) {
+//             console.log("Yikes, skipping this number: " + userChoice);
+//             continue;
+//         } else if (x % 2 === 1) {
+//             console.log("Here is an odd number: " + x);
+//         }
+// }
 
 //walk thru example for break/continue exercises
 // var input;//global scope --> using for next two loops
