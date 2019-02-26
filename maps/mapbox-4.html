@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mapbox</title>
+
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        #map {
+            width: 100%;
+            height: 600px;
+        }
+    </style>
+</head>
+<body>
+
+<div id='map'></div>
+<script src="../js/mapbox-geocoder-utils.js"></script>   //this is something justin built
+<script src="../js/keys.js"></script>
+<script>
+    mapboxgl.accessToken = mapboxglAccessToken;
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v9',//san antonio
+        zoom: 9,
+        center: [-98.4916, 29.4252]
+    });
+
+
+
+    var zionAddress = '1 Zion Park Blvd State Route 9 Springdale, UT 84767';
+
+
+    setTimeout(function() {
+        geocode(zionAddress, mapboxglAccessToken).then(function(data){
+            map.setCenter(data);
+            map.setZoom('9');
+        });
+    }, 3000);
+
+    var honCoor = //add honolulu coordinates
+
+    reverseGeocode(honCoor, mapboxglAccessToken).then(function(data){
+        geocode(data, mapboxgl).then(function(data){
+            map.setCenter(data);
+            map.setZoom;
+        })
+    })
+
+//moves to Zion Natl Park;
+    // setTimeout(function (){
+    //     map.setZoom(9);
+    //     map.setCenter([-113.0263, 37.2982]);
+    //     map.setStyle('mapbox://styles/mapbox/streets-v9')
+    // }, 5000);
+
+
+    //from walk through
+    //  setTImeout(function(){
+    //          map.setZoom(3).setCenter([long, lat]);}, 5000);
+    //     })
+
+    //
+</script>
