@@ -14,8 +14,30 @@
     //
     // Write a function, filterNumbers() that takes in an array of mixed data types and returns an array of only the numbers type in ascending order.
     //
-    //     Example input: ["fred", true, null, 5, 3, "7"]
+    input: ["fred", true, 5, 3]
     // Example output: [3, 5]
+    function filterNumbers(arr) {
+        //next step not req'd
+        var output = [];
+        //set to empty version of type I know I want to return...then know output will change and can always return output;
+
+        for(var i = 0; i < arr.length; i += 1){
+            if(typeof arr[i]=== 'number'){
+                output.push(arr[i]);//
+            }
+        }
+        output.sort();
+        return output;
+    }
+
+    console.log(filterNumbers(['fred', true, 5, 3]));
+
+    //pseudo code: problem solving strategy --> can you explain this problem to a five year old???
+    //loop through array and delete non-numbers
+    //arrange number in chronological order
+
+
+
     //
 //typeof i === number; !isNaN(parseFloat(i))-->to count a number inside a string
 
@@ -294,8 +316,33 @@
     //     }
     // ]
 
-
-
+//console.log notes on array methods pop() and shift()
+//     var name = 'justin'
+//     undefined
+//     name.toUpperCase()
+//     "JUSTIN"
+//     name
+//     "justin"
+//     var arr = [1, 2, 3];
+//     undefined
+//     var whatArrPopReturns = arr.pop()
+//     undefined
+//     arr
+//     (2) [1, 2]
+//     whatArrPopReturns
+//     3
+//     var names = ['hello', 'world', 'pugs'];
+//     undefined
+//     var valPopped = names.pop();
+//     undefined
+//     valPopped
+//     "pugs"
+//     names
+//     (2) ["hello", "world"]
+//     var firstEl = names.shift();
+//     undefined
+//     firstEl
+//     "hello"
 
 
 </script>
