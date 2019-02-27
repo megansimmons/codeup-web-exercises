@@ -1,6 +1,6 @@
 "use strict";
 $(document).ready(function(){
-    alert('The DOM has finished loading!');
+    // alert('The DOM has finished loading!');
 //put all code in here...it is more important than an iife
 
 
@@ -10,9 +10,12 @@ $(document).ready(function(){
 
 
 //Exercise Class Selectors
-$('.codeup').css('border', '1px solid red');
+// $('.codeup').css('border', '1px solid blue');
 
+//Element Selectors Exercise
 
+$('li').css('font-size', '20px');
 
+$('h1, p, li').css('background-color', 'yellow');
 
 });
