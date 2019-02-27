@@ -42,22 +42,22 @@
         })
     }, 3000)
 
-    //
-    // var favRestaurant = '1001 Northwest Loop 410, San Antonio, TX 78213';
-    //
-    // // var marker = new mapboxgl.Marker();
-    // // marker.setLngLat([- 77.0502,38.8893]);
-    // // marker.addTo(map);
-    //
-    // var markerOne = new mapboxgl.Marker();
-    //
-    // setTimeout(function() {
-    //     geocode(favRestaurant, mapboxglAccessToken).then(function(data){
-    //         map.setCenter(data);
-    //         map.setZoom('9');
-    //         markerOne.addTo(map);
-    //     });
-    // }, 3000);
+
+    var favRestaurant = '1001 Northwest Loop 410, San Antonio, TX 78213';
+
+    // var marker = new mapboxgl.Marker();
+    // marker.setLngLat([- 77.0502,38.8893]);
+    // marker.addTo(map);
+
+    var markerOne = new mapboxgl.Marker();
+
+    setTimeout(function() {
+        geocode(favRestaurant, mapboxglAccessToken).then(function(data){
+            map.setCenter(data);
+            map.setZoom('9');
+            markerOne.addTo(map);
+        });
+    }, 3000);
 
 
 
@@ -66,12 +66,15 @@
     //     center= [-98.4916, 29.4252];
     //     map.setStyle('mapbox://styles/mapbox/satellite-v9')
     // }, 5000);
-
-
-    //from walk through
+    //
+    //
+    // from walk through
     //  setTImeout(function(){
     //          map.setZoom(3).setCenter([long, lat]);}, 5000);
     //     })
 
-    //
+
+
+
+
 </script>
