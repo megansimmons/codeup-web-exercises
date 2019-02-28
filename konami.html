@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Konami Code</title>
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:600" rel="stylesheet">
+<style>
+    h1 {
+        text-align: center;
+        font-family: 'Titillium Web', sans-serif;
+    }
+    #yoda {
+        visibility: hidden
+    }
+</style>
+</head>
+<body>
+<h1>Can You Konami?</h1>
+<div id="yoda">
+    <iframe src="https://giphy.com/embed/kJD5887ojQimk" width="480" height="323" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script>
+     $(document).ready(function(){
+
+        "use strict";
+          var user = '';
+          var konami = '3838404037393739666513'
+
+          $(document).keyup(function(e){
+              user += e.keyCode;
+              console.log(e.keyCode)
+              if(user === konami){
+                  alert('Konamied you did! 30 extra lives you earned!');
+                  setTimeout(function(){
+                    $('body').css('background','aqua');
+                  }, 1000);
+                  setTimeout(function(){
+                      $('body').css('background','yellow');
+                  }, 2000);
+                  setTimeout(function(){
+                      $('#yoda').css('visibility','visible');
+                  }, 3000);
+
+              }
+          });
+
+
+
+
+
+
+
+
+
+    });
+
+</script>
+</body>
+</html>
