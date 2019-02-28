@@ -26,12 +26,15 @@
 
         "use strict";
           var user = '';
-          var konami = '3838404037393739666513'
-
+          var konami = '3838404037393739666513';
+         function reset(){
+              user = '';
+         }
           $(document).keyup(function(e){
               user += e.keyCode;
               console.log(e.keyCode)
               if(user === konami){
+                  reset();
                   alert('Konamied you did! 30 extra lives you earned!');
                   setTimeout(function(){
                     $('body').css('background','aqua');
@@ -42,8 +45,12 @@
                   setTimeout(function(){
                       $('#yoda').css('visibility','visible');
                   }, 3000);
-
+                  setTimeout(function(){
+                      $('body').css('background','white');
+                      $('#yoda').css('visibility','hidden');
+                  }, 7000);
               }
+
           });
 
 
