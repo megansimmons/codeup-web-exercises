@@ -19,9 +19,6 @@
 <script src="../js/mapbox-geocoder-utils.js"></script>
 <script src="../js/keys.js"></script>
 <script>
-
-
-
     mapboxgl.accessToken = mapboxglAccessToken;
     var map = new mapboxgl.Map({
         container: 'map',
@@ -29,9 +26,7 @@
         zoom: 10,
         center: [-98.4916, 29.4252]
     });
-
-
-  // var yayasThai= {
+    // var yayasThai= {
   //     address: "5305 McCullough Ave, San Antonio, TX 78212",
   //     popupHTML: "<p>Check out the panang curry!</p>"
   // };
@@ -60,7 +55,9 @@
 
     favEats.forEach(function(element, index, array){
        placeMarkerAndPopup(element, mapboxglAccessToken, map);
-  });
+    });
+
+
   //   placeMarkerAndPopup(favEats[0], mapboxglAccessToken, map);
   //   placeMarkerAndPopup(favEats[1], mapboxglAccessToken, map);
   //   placeMarkerAndPopup(favEats[2], mapboxglAccessToken, map);

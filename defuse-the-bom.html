@@ -41,10 +41,7 @@
 
 //BEGIN EXERCISES
 
-    var mapTimer = 5;
-
-    function
-
+    var detonationTimer = 5;
 
     // TODO: This function needs to be called once every second
     function updateTimer() {
@@ -53,7 +50,6 @@
             document.body.innerHTML = '';
         } else if (detonationTimer > 0) {
             document.getElementById('timer').innerHTML = detonationTimer;
-
         }
 
         detonationTimer--;
