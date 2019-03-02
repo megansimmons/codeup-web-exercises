@@ -19,10 +19,16 @@
 <script src="../js/mapbox-geocoder-utils.js"></script>   //this is something justin built
 <script src="../js/keys.js"></script>
 <script>
+
+    // Create an HTML file called mapbox-4.html centered on San Antonio that programmatically is re-centered over Zion National Park using the coordinates of the park by geocoding the physical address.
+
+        // Add the latitude and longitude of Honolulu, Hawaii and use reverse geocoding to move the map to this location by geocoding inside of the reverseGeocode function.
+
     mapboxgl.accessToken = mapboxglAccessToken;
+
     var map = new mapboxgl.Map({
         container: 'map',
-        style: 'mapbox://styles/mapbox/streets-v9',//san antonio
+        style: 'mapbox://styles/mapbox/streets-v9',    //san antonio
         zoom: 9,
         center: [-98.4916, 29.4252]
     });
@@ -30,36 +36,24 @@
 
 
     var zionAddress = '1 Zion Park Blvd State Route 9 Springdale, UT 84767';
+    var honCoor = {lng: -157.8583, lat: 21.3069};
 
 
-    setTimeout(function() {
+    setTimeout(function(){
         geocode(zionAddress, mapboxglAccessToken).then(function(data){
             map.setCenter(data);
-            map.setZoom('9');
+            map.setZoom(9);
         });
     }, 3000);
 
-    var honCoor = //add honolulu coordinates
-
-    reverseGeocode(honCoor, mapboxglAccessToken).then(function(data){
-        geocode(data, mapboxgl).then(function(data){
-            map.setCenter(data);
-            map.setZoom;
-        })
-    })
-
-//moves to Zion Natl Park;
-    // setTimeout(function (){
-    //     map.setZoom(9);
-    //     map.setCenter([-113.0263, 37.2982]);
-    //     map.setStyle('mapbox://styles/mapbox/streets-v9')
-    // }, 5000);
+    setTimeout(function() {
+        reverseGeocode(honCoor, mapboxglAccessToken).then(function (data) {
+            geocode(data, mapboxglAccessToken).then(function (data) {
+                map.setCenter(data);
+                map.setZoom(9);
+            });
+        });
+    }, 5000);
 
 
-    //from walk through
-    //  setTImeout(function(){
-    //          map.setZoom(3).setCenter([long, lat]);}, 5000);
-    //     })
-
-    //
 </script>

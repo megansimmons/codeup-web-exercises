@@ -15,8 +15,9 @@
 <body>
 
 <div id='map' style='width: 400px; height: 300px;'></div>
+<script src="../js/keys.js"></script>
 <script>
-    mapboxgl.accessToken = 'pk.eyJ1IjoibWVnYW5zaW1tb25zIiwiYSI6ImNqc2tybzBzYjFrNTY0NHA2ZDR0cjZrZ2UifQ.hdEEMBjnZY-Ts5vYgYT48g';
+    mapboxgl.accessToken = mapboxglAccessToken;
     var map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/streets-v9',
@@ -29,8 +30,9 @@
 
 
     var popup = new mapboxgl.Popup()
-        .setLngLat([- 77.0502,38.8893])
+        // .setLngLat([- 77.0502,38.8893])
         .setHTML('<h1>Lincoln Memorial</h1>')
+        // .addTo(map)
 
         marker.setPopup(popup);//click on map for popup
         // .addTo(map); leave this off so that you have to click on the map for the popup to appear
