@@ -90,12 +90,45 @@
 
         });
 
-        // TRAVERSING ARRAYS
+        // TRAVERSING ARRAYS 3/4/19
+
 
         // Create a button that, when clicked, makes the last li in each ul have a yellow background.
 
+        //Walkthru of exercise
 
-        $('button').click(function() {
+        //part 3
+        // $('#highlight-btn').click(function() {
+        // // $('ul').children().last().css('background-color', 'yellow');
+        //
+        //     $('ul').each(function(index, element){
+        //         $(element).children().last().css('background-color', 'yellow');
+        //     });
+        // });
+        //
+        // //part 4
+        // $('h3').click(function(){
+        //     $(this).next().children().css('font-weight', 'bold');//or e.target
+        //
+        // });
+        //
+        // //part 5
+        //
+        // $('li').click(function(){
+        //     console.log($(this).parent().children().first().css('color','blue'));
+        // });
+
+
+
+
+
+
+
+
+
+
+
+        $('button').on('click', function() {
             $('ul li:last-child').toggleClass('highlight');//targets last child of each ul!
         });
 
@@ -103,19 +136,24 @@
 
 
 
-        // $('#zion').on('click',(function() {
-        //     $('li').css('font-weight', 'bold');
-        //     // $(this).off('click');
-        // }));
-        $('#zion').on('click',(function(){
-            $('#zion').next().css('font-weight','bold');
-        }));
-        $('#arches').on('click',(function(){
-            $('#arches').next().css('font-weight','bold');
-        }));
-        $('#big').on('click',(function(){
-            $('#big').next().css('font-weight','bold');
-        }));
+        $('h3').on('click',function() {
+            $(this).next().children().css('font-weight', 'bold')
+            // console.log($(this).next().children().css('font-weight'))
+            console.log($(this).css('font-weight'));
+
+            //trying to return text to normal weight once clicked a second time
+            // if($(this).css('font-weight')){
+            //     $(this).next().children().css('font-weight', 'normal')
+            // }
+
+        });
+
+        $('li').on('click', function(e) {
+            // e.preventDefault();  nothing changed
+            $(this).parent().children().first().css('color', 'blue')
+        });
+
+
 
 
 
