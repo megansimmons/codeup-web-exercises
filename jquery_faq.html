@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>FAQS US Nat'l Parks</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+          integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <style>
         .invisible {
             visibility: hidden;
@@ -13,6 +16,13 @@
     </style>
 </head>
 <body>
+    <div>
+        <h2 class = "alert alert-warning modal-dialog">Please register for the site!</h2>
+    </div>
+    <div>
+        <h1>Would you like to sign up for our newsletter?</h1>
+        <span>x</span>
+    </div>
     <h1>FAQs About US National Parks</h1>
 
     <a href="#" id="showAnswers">Click To See Answers</a>
@@ -68,8 +78,10 @@
     </ul>
 
 
-
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+            integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
     <script>
         $(document).ready(function(){
            "use strict";
@@ -153,11 +165,32 @@
             $(this).parent().children().first().css('color', 'blue')
         });
 
+//  EFFECTS EXERCISE 3/4/19
+//         At the top of the page, add a div with two elements, an h1 that reads "Would you like to sign up for our newsletter?" and a span that has an 'x' in it. When the 'x' is clicked, hide the entire div element.
 
 
+        $('span').on('click',function(){
+            $('div').hide();
+        });
+//
+//             The uls next to each h3 that contain facts about each park should start out hidden, and when the corresponding h3 is clicked, the display of the ul should be toggled with a sliding effect.
+
+        // $('ul').hide();
+        $('h3').next().hide();
+
+        $('h3').on('click',function(){
+            $(this).next().slideToggle();
+        });
 
 
+//
+//             After the user has been on the page for 8 seconds, an h2 should fade in that asks the user to register for the site.
+//
 
+
+            $('h2').hide().delay(8000).fadeIn(2000);
+
+        // $('.modal-dialog').modal('fade');
 
     </script>
 

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Picture Swap</title>
+    <style>
+        div {
+            display: inline-block;
+        }
+        .one, .two, .three{
+            height: 150px;
+            width: 150px;
+            border: 4px solid black;
+            display: inline-block;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div>
+        <img src="img/belgian-shepherd.jpeg" class="one">
+         <button id="dog">swap</button>
+    </div>
+    <div>
+        <img src="img/belgian-waffle.jpeg" class="two">
+        <button id="waffle">swap</button>
+    </div>
+    <div>
+        <img src="img/belgium-flag.png" class ="three">
+        <button id="flag">swap</button>
+    </div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
+<script>
+    ($(document).ready(function () {
+        "use strict";
+
+
+        // Create 3 divs that each look like a picture Frame; each one should have a unique background image and a button underneath that swaps the image from the frame. Use Traversing functions of jQuery to accomplish this.
+        //
+        //     The rules are the following:
+        //
+        //     The left frame swaps to the right and takes the image from the frame in the center.
+        //     The center frame swaps randomly to either the left or right.
+        //     The right frame swaps to the left and takes the image from the frame in the center.
+        //
+
+
+        //  RANDOM GENERATOR
+        // var randomImg = $("img").height
+        // console.log(randomImg);
+        // var randomPosition = 1 + Math.floor(Math.random() * randomImg);
+        // console.log(randomPosition);
+
+        // LEFT
+        var dog= $(".one").attr("src");//img/belgian-shepherd.jpeg
+        // console.log(dog);
+
+        //  RIGHT
+
+        var waffle = $(".two").attr("src");//img/belgian-waffle.jpeg
+        // console.log(waffle);
+
+
+        // CENTER
+        var flag= $(".three").attr("src");//img/belgium-flag.png
+        // console.log(flag);
+
+        $("#dog").on("click", function(){
+            $(".three").attr("src", dog);
+            $(".one").attr("src", waffle);//now the img is the waffle
+        });
+
+
+       $("flag").on("click", function(){
+           console.log($("one").attr("src", flag));
+       })
+
+
+
+
+
+
+
+
+
+
+
+
+}));
+
+
+</script>
+
+</body>
+
+</html>
