@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!-- saved from url=(0059)https://java.codeup.com/examples/javascript/ajax-store.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Online Store</title>
+</head>
+<body>
+
+<h1>My Tool Store</h1>
+
+<table id="products">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Categories</th>
+        </tr>
+    </thead>
+    <tbody id="insertProducts"></tbody>
+</table>
+<button id="refresh">Refresh</button>
+<script src="./ajax-store_files/jquery.min.js"></script>
+
+<script>
+$().ready(function() {
+    "use strict";
+
+
+    // Your online tool store should load data from the JSON file using a get request and append the data to the table. You will need to use either $.ajax() or $.get(), and a .done() callback.
+    //     Add some new entries to inventory.json and see how the data on the page gets updated.
+    //     Add a "Refresh" button that will load inventory.json for you without having to refresh the entire page.
+    // Add Twitter Bootstrap to your online store with some custom CSS to make the style your own.
+    // TODO: Create an ajax GET request for /data/inventory.json
+
+    var response = $.get("data/inventory.json");//appends data to the table
+
+    response.done(function(data){
+        var tableInfo = " ";
+        for(var i = 0; i < data.length; i+=1) {
+           tableInfo += "<tr>";
+           tableInfo += "<td>" + data[i].title + "</td>"
+           tableInfo += "<td>" + data[i].quantity + "</td>"
+           tableInfo += "<td>" + data[i].price + "</td>"
+           tableInfo += "<td>" + data[i].categories + "</td>"
+           tableInfo += "</tr>";
+        }
+        $("#insertProducts").html(tableInfo);
+    })
+
+    $("#refresh").on('click',function(e){
+
+        reload(response);
+
+    })
+
+//second way
+//     var request = $.ajax("data/inventory.json");
+//     request.done(function (data) {
+//         data.forEach(function(element){
+//             $('#insertProducts').append('<tr>' +
+//                 '<td>' + element.title +
+//                 '<td>' + element.quantity +
+//                 '<td>' + element.categories +
+//                 '<td>' + element.price);
+//         });
+
+
+
+
+});
+</script>
+
+
+
+</body></html>
