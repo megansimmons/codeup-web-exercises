@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax Blog</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+          integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+</head>
+<body class="container">
+    <div id="posts" class="card">
+        <h1>Blog</h1>
+        <!--<div>-->
+            <!--<h2>Title</h2>-->
+            <!--<section>Content</section>-->
+            <!--<div>Categories</div>-->
+            <!--<h2>Title</h2>-->
+            <!--<section>Content</section>-->
+            <!--<div>Categories</div>-->
+        <!--</div>-->
+
+
+    </div>
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+        integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+<script>
+$().ready(function(){
+    // alert("ready!")
+    "use strict";
+
+    var posts = $.ajax("data/blog.json")
+    // console.log(posts);
+
+    posts.done(function(post){
+
+    //     console.log(post[0].title)//My First Blog
+    //     console.log(post[1].title)//The Second Post
+    //     console.log(post[0].content)//paragraph lorem....
+
+        var blogStuff = "";
+
+        post.forEach(function(post){
+            blogStuff +="<div class='card'>"
+            blogStuff +="<h2 class='card-header '>" + post.title + "</h2>"
+            blogStuff +="<section class='card-text'>" + post.content + "</section>"
+            blogStuff +="<div class='card-footer'>" + post.categories + "</div>"
+            blogStuff +="</div>";
+
+        })
+
+        $("#posts").html(blogStuff);
+    })
+
+
+
+});
+
+
+</script>
+</body>
+</html>
