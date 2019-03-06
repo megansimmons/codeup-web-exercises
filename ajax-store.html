@@ -1,24 +1,38 @@
 <!DOCTYPE html>
 <!-- saved from url=(0059)https://java.codeup.com/examples/javascript/ajax-store.html -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Online Store</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+          integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
 </head>
-<body>
+<body class="container">
 
-<h1>My Tool Store</h1>
-
-<table id="products">
-    <thead>
-        <tr>
+<h1 class="text-center">My Tool Store</h1>
+<div class="row text-center">
+    <table class=" table-bordered table-striped" id="products">
+    <thead class="btn-primary">
+        <tr >
             <th>Title</th>
             <th>Quantity</th>
             <th>Price</th>
             <th>Categories</th>
         </tr>
     </thead>
-    <tbody id="insertProducts"></tbody>
-</table>
-<button id="refresh">Refresh</button>
+    <tbody id="insertProducts">
+    <!--in walk thru actually add this in to html tbody-->
+        <!--<tr>-->
+            <!--<td>Screwdriver</td>-->
+            <!--<td>500</td>-->
+            <!--<td>10</td>-->
+            <!--<td>awesome, useful, metal</td>-->
+        <!--</tr>-->
+    </tbody>
+    </table>
+</div>
+<button id="refresh" class="button block">Refresh</button>
 <script src="./ajax-store_files/jquery.min.js"></script>
 
 <script>
@@ -35,21 +49,38 @@ $().ready(function() {
     var response = $.get("data/inventory.json");//appends data to the table
 
     response.done(function(data){
-        var tableInfo = " ";
+        var tableInfo="";
         for(var i = 0; i < data.length; i+=1) {
            tableInfo += "<tr>";
            tableInfo += "<td>" + data[i].title + "</td>"
            tableInfo += "<td>" + data[i].quantity + "</td>"
            tableInfo += "<td>" + data[i].price + "</td>"
-           tableInfo += "<td>" + data[i].categories + "</td>"
+           tableInfo += "<td>" + data[i].categories[i] + "</td>"
            tableInfo += "</tr>";
         }
         $("#insertProducts").html(tableInfo);
     })
 
-    $("#refresh").on('click',function(e){
 
-        reload(response);
+    $("#refresh").on('click',function(){
+        //need a second ajax request
+        response = $.get("data/inventory.json");
+        // $("#insertProducts").html(tableInfo);
+
+        response.done(function(data){
+            var tableInfo="";
+            for(var i = 0; i < data.length; i+=1) {
+                tableInfo += "<tr>";
+                tableInfo += "<td>" + data[i].title + "</td>"
+                tableInfo += "<td>" + data[i].quantity + "</td>"
+                tableInfo += "<td>" + data[i].price + "</td>"
+                tableInfo += "<td>" + data[i].categories[i] + "</td>"
+                tableInfo += "</tr>";
+            }
+            $("#insertProducts").html(tableInfo);
+        })
+
+
 
     })
 
@@ -65,11 +96,17 @@ $().ready(function() {
 //         });
 
 
+//WALK THRU
+
+
+
 
 
 });
 </script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+        integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 
 
 </body></html>
