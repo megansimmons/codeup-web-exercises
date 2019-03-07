@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>jQuery Practice</title>
+    <!--any bootstrap link and css here-->
+    <style>
+        .fontChange {
+            font-family: arial;
+            color: white;
+            background-color: darkslateblue;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Texas Things</h2>
+
+    <div id="main">
+
+
+        <h3>UL of Trees</h3>
+        <ul class="list" id="trees">
+            <li>pecan</li>
+            <li>maple</li>
+            <li>oak</li>
+            <li>mountain laurel</li>
+            <li>pine</li>
+        </ul>
+
+        <h3>UL of Flowers</h3>
+
+        <ul class="list" id="flowers">
+            <li>bluebonnet</li>
+            <li>turks cap</li>
+            <li>black-eyed susan</li>
+        </ul>
+
+
+        <h3>OL of Cities</h3>
+        <ol class="list" id="cities">
+            <li>San Antonio</li>
+            <li>Austin</li>
+            <li>Dallas</li>
+            <li>Houston</li>
+        </ol>
+
+    </div>
+
+<script
+        src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+<script>
+    $().ready(function(){
+        // alert('doc is ready')
+
+        //Make each h3s have font arial when clicked
+        $( "h3").on("click", function(){
+
+            // $(this).css("font-family", "arial");
+
+            $(this).toggleClass("fontChange");
+
+            // $("h3").css("background","blue");
+
+        })
+
+
+
+
+
+        //Give all h3s a background color of blue when clicked
+
+
+        //Put a border around the third li on the page
+        // console.log($("#trees").children().first().next().text());//maple
+
+
+
+        console.log($("#trees").children().eq(1).text());//maple
+
+       var oakClick= $("#trees").children().eq(2);//oak
+
+        $(oakClick).on("click",function(){
+            $(oakClick).css("border","solid red 1px");
+        })
+
+
+
+       // $("li").on("click", function(){
+       //     console.log($(this).$("#trees").children().eq(2))
+       //         // .css("border","solid red 1px");
+       // })
+
+
+
+
+        //When you click any city, highlight the title of the city list
+
+        // $("li").on("click", function(){
+        //     console.log($(this).parent().parent().children().text());
+        // })
+
+        // $("h3").on("click",function(){
+        //     $
+        // })
+
+
+
+        // css("background","yellow");
+
+
+
+    })
+</script>
+</body>
+
+</html>

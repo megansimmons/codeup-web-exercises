@@ -164,6 +164,7 @@
             // $('ol').children().each(function(index, element){
             //
             // });
+
     // $('li').on('click',function(){
     //     $(this).parent().css('background','red');
     // })
@@ -218,15 +219,26 @@
     //         // alert($('ul').children().text());
     //     })
     //
-    //
     // })
 
-    $('h3').on('click',function(){
-        $(this).each(function(index, element){
-            var info= $('article').children().next().next().next().children().text();
-            alert(info);
-        })
+    $('h3').on('click', function(){
+        alert($(this).next().text() + $(this).next().next().next().text() );
+        alert($(this).next().next().next().text());
+        alert($(this).next().next().next().next().next().text());
+        alert($(this).next().next().next().next().next().next().next().text());
+
+
+
     })
+    // $('h3').on('click',function(){
+    //
+    //     $(this).each(function(index, element){
+    //
+    //         var info= $('article').children().next().next().next().children().text();
+    //
+    //         alert(info);
+    //     })
+    // })
 
     console.log($('article').children().next().next().next().children().first().text());
     console.log($('article').children().next().next().next().children().text());

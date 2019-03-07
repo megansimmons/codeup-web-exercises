@@ -28,6 +28,8 @@
         return sum;
     }
 
+    // console.log(sumSequence(1, 4, 1));
+
     //2. Given a string of any length with any characters in it, write a function to determine whether or not the string contains the whole word "spanish".  The order of characters/spelling is important, a string "agkjnspanishsad" would return true while "asdnsplianidfsh" would return false.  Upper and lower case does not matter.  Return values should be booleans: true/false
 
     function spanish(str){
@@ -40,9 +42,56 @@
             return false
         }
     }
+    //
+    // console.log(spanish('asdfspanishdfs'));
+    // console.log(spanish('dfcnaiuovrhghjf'));
 
-    console.log(spanish('asdfspanishdfs'));
-    console.log(spanish('dfcnaiuovrhghjf'));
+
+
+
+
+
+    // 3.  Given an array of integers, write a function that returns an array of 2 integers  The first integer will be the count of the positive integers, and the second integer will be the sum of the negative integers.  If the input is empty or null, return an empty array.
+
+    //Example:
+    //Input: [1, -6, 5, 4, 3, -7, -10, 201, -3]
+    //Output: [5, -26]
+
+    //Input: null
+    //Output: [];
+    var input =  [1, -6, 5, 4, 3, -7, -10, 201, -3];
+
+    function integerCounter(arr){
+        var positives=[];
+        var negatives=[];
+        var newArray=[];
+
+        for (var i = 0; i < arr.length; i +=1);
+            if(i > 0){
+                console.log(positives.push(i));
+            }
+        return newArray;
+    }
+integerCounter(input);
+
+
+//This returns an object with three properties (based on var input array example)
+    //negative: 4, zero:__  positive: 5, (not zeros to return)
+//     var count = input.reduce(function(a, b){
+//         if (b < 0) {
+//             a.negative = ++a.negative || 1;
+//         }
+//         if (b === 0) {
+//             a.zero = ++a.zero || 1;
+//         }
+//         if (b > 0) {
+//             a.positive = ++a.positive || 1;
+//         }
+//         return a;
+//     }, {});
+// console.log(count);
+
+
     // })();
 </script>
 </body>

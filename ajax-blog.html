@@ -43,9 +43,9 @@ $().ready(function(){
 
         post.forEach(function(post){
             blogStuff +="<div class='card'>"
-            blogStuff +="<h2 class='card-header '>" + post.title + "</h2>"
-            blogStuff +="<section class='card-text'>" + post.content + "</section>"
-            blogStuff +="<div class='card-footer'>" + post.categories + "</div>"
+            blogStuff +="<h2 class='card-header bg-success font-weight-bold'>" + post.title + "</h2>"
+            blogStuff +="<section class='card-text font-weight-light font-italicized'>" + post.content + "</section>"
+            blogStuff +="<div class='card-footer text-black-50'>" + post.categories + "</div>"
             blogStuff +="</div>";
 
         })
