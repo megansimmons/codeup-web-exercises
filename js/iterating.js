@@ -13,7 +13,7 @@
      * Create a log statement that will log the number of elements in the names
      * array.
      */
-console.log('There are ' + names.length + ' names in the array.');
+// console.log('There are ' + names.length + ' names in the array.');
     /**
      * TODO:
      * Create log statements that will print each of the names individually by
@@ -28,9 +28,9 @@ console.log("The fourth name is: " + names[3]);
      * Write some code that uses a for loop to log every item in the names
      * array.
      */
-for (var i = 0; i < names.length; i++) {
-    console.log("The name at index " + i + ' is: ' + names[i]);
-}
+// for (var i = 0; i < names.length; i++) {
+//     console.log("The name at index " + i + ' is: ' + names[i]);
+// }
 
     /**
      * TODO:
@@ -69,4 +69,13 @@ function last(names){
 }
 
 console.log(last(names));
+
+
+//
+
+
+
+
+
+
 // })();
