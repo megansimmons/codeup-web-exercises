@@ -59,7 +59,7 @@ users.push({
   languages
 })
 
-
+//console.log(users[users.length -1].name)
 
 // TODO: replace `var` with `let` in the following variable declarations
 // var emails = [];
@@ -109,8 +109,8 @@ users.forEach((user) => {
   // developers.push(name + '\'s email is ' + email + name + ' knows ' + languages.join(', '));
 
   developers.push(`${name}'s email is ${email} ${name} knows ${languages.join(',')} `);
-  // console.log(developers);
 });
+  console.log(developers);
 
 
 
@@ -131,5 +131,5 @@ let list = '<ul>';
 for (let developer of developers) {
   list += `<li>${developer}</li>`;
 }
-
 list += '</ul>';
+console.log(list);
