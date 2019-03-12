@@ -17,8 +17,14 @@
 // message();
 
 
-//require way
+//require way 1
 
-// const message = require('./say-hello.js');
+const message = require('./say-hello.js');
 //
 // message()
+
+
+
+// require way 2
+
+console.log(message.newBinding());

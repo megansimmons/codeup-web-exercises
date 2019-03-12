@@ -39,7 +39,17 @@ const users = [
 
 //Directions from curriculum
 
+//Use .filter to create an array of user objects where each user object has at least 3 languages in the languages array.
+
+
+const languages = users.filter(user =>  users.length);
+
+
+console.log(languages);
+
+
 // Use .map to create an array of strings where each element is a user's email address
+
 
 // this gives back all objects with all properties
 // const emails = users.map(function(email){
@@ -64,6 +74,8 @@ let emailsArr = [];
 // }
 // emails();
 
+
+
 //using a forEach loop / working
 
 // users.forEach(function(user, index, array){
@@ -73,6 +85,8 @@ let emailsArr = [];
 // });
 // console.log(emailsArr);
 
+
+
 // using map() to create new array / IT WORKS!!!! why? not clear...
 
 // const emails = users.map(function({email}) {
@@ -80,9 +94,36 @@ let emailsArr = [];
 // })
 // console.log(emails);
 
+
+
+// refactor map() as arrow function
+
 const emails = users.map(({email}) => email);
 console.log(emails);
 
+
 // Use reduce to get the total years of experience from the list of users. Once you get the total of years you can use the result to calculate the average.
+//
+const years = users.reduce((yearsOfExperience, user) => {
+    return yearsOfExperience + user.yearsOfExperience
+}, 0);
+
+console.log(years);// 35
+
+let averageExp = years / users.yearsOfExperience;
+console.log(averageExp);// NaN
+
+
+// const avgYears = users.reduce((yearsOfExperience, user, index, array) => {
+//     yearsOfExperience += user;
+//     if( index === array.length -1) {
+//         return yearsOfExperience/array.length;
+//     } else {
+//         return yearsOfExperience;
+//     }
+// });
+//
+// console.log(avgYears);// NaN
+
 //     Use reduce to get the longest email from the list of users.
     // Use reduce to get the list of user's names in a single string. Example: Your instructors are: ryan, luis, zach, fernando, justin.
