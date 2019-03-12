@@ -59,7 +59,7 @@ users.push({
   languages
 })
 
-//console.log(users[users.length -1].name)
+console.log(users[users.length -1].name)
 
 // TODO: replace `var` with `let` in the following variable declarations
 // var emails = [];
